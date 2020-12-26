@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index"
+  },
+  "navigationBarBackgroundColor": "#E64340",
+  "navigationBarTitleText": "会员中心",
+  "navigationBarTextStyle": "white"
+}

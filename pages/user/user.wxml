@@ -1,0 +1,144 @@
+<!--pages/user/user.wxml-->
+<view class="container">
+  <view class="header" wx:if="{{!show}}">
+    <van-icon name="contact" />
+    <van-button type="default" size='small' bindgetuserinfo="processLogin" open-type="getUserInfo">立即登录</van-button>
+  </view>
+  <view class="head" wx:if="{{show}}">
+    <image src="{{user.avatarUrl}}"></image>
+    <view>
+      <view>用户ID：{{user.id}}</view>
+      <view>{{user.nick}}</view>
+    </view>
+  </view>
+  <view class="nav">
+    <view>
+      <view>0.00</view>
+      <view>余额</view>
+    </view>
+    <view>
+      <view>0.00</view>
+      <view>冻结</view>
+    </view>
+    <view>
+      <view>0</view>
+      <view>积分</view>
+    </view>
+    <view>
+      <view>0</view>
+      <view>成长值</view>
+    </view>
+  </view>
+  <view class="ul">
+    <view class="li">
+      我的订单
+      <van-icon name="arrow" />
+    </view>
+    <view class="shopping">
+      <view>
+        <van-icon name="paid" />
+        <view>待付款</view>
+      </view>
+      <view>
+        <van-icon name="send-gift-o" />
+        <view>待发货</view>
+      </view>
+      <view>
+        <van-icon name="logistics" />
+        <view>待收货</view>
+      </view>
+      <view>
+        <van-icon name="flower-o" />
+        <view>待评价</view>
+      </view>
+      <view>
+        <van-icon name="after-sale" />
+        <view>售后</view>
+      </view>
+    </view>
+    <view class="li">
+      优惠买单
+      <van-icon name="arrow" />
+    </view>
+    <view class="li">
+      资金明细
+      <van-icon name="arrow" />
+    </view>
+  </view>
+  <view class="ul">
+    <view class="li">
+      成为分销商
+      <van-icon name="arrow" />
+    </view>
+  </view>
+  <view class="ul">
+    <view class="li">
+      申请发票
+      <van-icon name="arrow" />
+    </view>
+    <view class="li">
+      发票记录
+      <van-icon name="arrow" />
+    </view>
+  </view>
+  <view class="ul">
+    <view class="li">
+      收货地址
+      <van-icon name="arrow" />
+    </view>
+    <view class="li">
+      领劵中心
+      <van-icon name="arrow" />
+    </view>
+    <view class="li">
+      我的收藏
+      <van-icon name="arrow" />
+    </view>
+  </view>
+  <view class="ul">
+    <view class="li">
+      每日签到
+      <van-icon name="arrow" />
+    </view>
+    <view class="li">
+      积分劵总换积分
+      <van-icon name="arrow" />
+    </view>
+    <view class="li">
+      积分总换成长值
+      <van-icon name="arrow" />
+    </view>
+  </view>
+  <view class="ul">
+    <view class="li">
+      绑定手机
+      <view class="item">立即绑定</view>
+    </view>
+  </view>
+  <view>
+    <view class="li">
+      关于我们
+      <van-icon name="arrow" />
+    </view>
+    <view class="li">
+      视频客服
+      <van-icon name="arrow" />
+    </view>
+    <view class="li">
+      帮助中心
+      <van-icon name="arrow" />
+    </view>
+    <view class="li">
+      清除缓存
+      <van-icon name="arrow" />
+    </view>
+    <view class="li" bindtap="loginOut">
+      退出登录
+      <van-icon name="arrow" />
+    </view>
+    <view class="li">
+      当前版本
+      <text>9.6.0</text>
+    </view>
+  </view>
+</view>

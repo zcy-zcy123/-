@@ -1,0 +1,15 @@
+<!--pages/Coupon/Coupon.wxml-->
+<view class="container">
+  <view class="nav">
+    <view wx:for="{{nav}}" wx:key='index' data-index="{{index}}" bindtap="navs" class="{{active==index?'cur':'curr'}}">
+      {{item.title}}</view>
+  </view>
+  <view class="juan">
+    动态口令总换优惠劵
+    <van-icon name="arrow" />
+  </view>
+  <van-empty description="暂无优惠券" wx:if="{{show}}" />
+  <view class="list" wx:else>
+
+  </view>
+</view>

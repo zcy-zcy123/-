@@ -1,0 +1,41 @@
+<!--pages/search/search.wxml-->
+<view class="container">
+  <view class="search">
+    <view>
+      <input type="text" placeholder="请输入关键字" value="{{value}}" />
+      <van-icon name="search" />
+    </view>
+    <van-icon name="points" wx:if="{{show}}" bindtap="tab" />
+    <van-icon name="apps-o" wx:else bindtap="tab" />
+  </view>
+  <view class="nav">
+    <view wx:for="{{nav}}" wx:key='index' data-index="{{index}}" bindtap="navs" class="{{active==index?'cur':'curr'}}">
+      {{item.title}}</view>
+  </view>
+  <view class="list" wx:if="{{show}}">
+    <view wx:for="{{list}}" wx:key='index'>
+      <image src="{{item.pic}}"></image>
+      <view>
+        <view>{{item.name}}</view>
+        <view>￥{{item.minPrice}}</view>
+        <view>已售{{item.numberSells}}件</view>
+        <view>
+          <van-icon name="shopping-cart-o"  data-id="{{item.id}}" bindtap="addCar"/>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="list1" wx:else>
+    <view wx:for="{{list}}" wx:key='index'>
+      <image src="{{item.pic}}"></image>
+      <view>
+        <view>{{item.name}}</view>
+        <view>￥{{item.minPrice}}</view>
+        <view>已售{{item.numberSells}}件</view>
+        <view>
+          <van-icon name="shopping-cart-o" data-id="{{item.id}}" bindtap="addCar"/>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

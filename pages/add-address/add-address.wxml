@@ -1,0 +1,45 @@
+<view class="container">
+  <view class="header" bindtap="wx_address">
+    获取微信收货地址
+    <van-icon name="arrow" />
+  </view>
+  <view class="li" bindtap="address">
+    省份
+    <view>
+      <input type="text" placeholder="请选择" placeholder-style='color:black' value="{{value}}" />
+      <van-icon name="arrow" />
+    </view>
+  </view>
+  <view class="li" bindtap="address" wx:if="{{show1}}">
+    城市
+    <view>
+      <input type="text" placeholder="请选择" placeholder-style='color:black' value="{{value1}}" />
+      <van-icon name="arrow" />
+    </view>
+  </view>
+  <view class="li" bindtap="address" wx:if="{{show2}}">
+    区县
+    <view>
+      <input type="text" placeholder="请选择" placeholder-style='color:black' value="{{value2}}" />
+      <van-icon name="arrow" />
+    </view>
+  </view>
+
+  <van-popup show="{{ show }}" position="bottom" custom-style="height: 62%;" bind:close="onClose">
+    <van-picker show-toolbar title="" columns="{{ columns }}" bind:cancel="onCancel" bind:confirm="onConfirm" />
+  </van-popup>
+
+  <view class="li">
+    姓名
+    <input type="text" placeholder="填写收货人" value="{{name}}" bindblur="Name" />
+  </view>
+  <view class="li">
+    手机号码
+    <input type="text" placeholder="填写手机号码" value="{{mobile}}" bindblur="Mobile" />
+  </view>
+  <view class="li">
+    详细地址
+    <input type="text" placeholder="街道门牌信息" value="{{Address}}" bindblur="address_" />
+  </view>
+  <view class="btn" bindtap="Add_address">保存</view>
+</view>

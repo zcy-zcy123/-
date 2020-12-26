@@ -1,0 +1,27 @@
+<!--pages/shopCar/shopCar.wxml-->
+<view class="container">
+  <view class="null" wx:if="{{show}}">
+    <van-icon name="shopping-cart-o" />
+    <view class="name">购物车空空如也~~</view>
+    <navigator url="/pages/home/home" open-type="switchTab" class="go">去逛逛</navigator>
+  </view>
+  <view wx:else class="item">
+    <view wx:for="{{list.items}}" wx:key='index'>
+      <image src="{{item.pic}}"></image>
+      <view>
+        <view><text>{{item.name}}</text>
+          <image src="/assets/images/common/del.png" bindtap="remove" data-key='{{item.key}}'></image>
+        </view>
+        <view>￥{{item.price}}</view>
+        <view><text></text>
+          <van-stepper value="{{item.number}}" input-width="50rpx" button-size="50rpx" disable-input='{{true}}'
+            bind:change='change' data-key='{{item.key}}' />
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="footer" wx:if="{{!show}}">
+    <view>合计：￥{{list.price}}+{{list.number}}积分</view>
+    <view bindtap="toMoney">去结算</view>
+  </view>
+</view>

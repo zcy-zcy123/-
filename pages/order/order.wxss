@@ -1,0 +1,186 @@
+/* pages/order/order.wxss */
+.container {
+  width: 100%;
+}
+
+.list {
+  width: 100%;
+}
+
+.list>view {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20rpx 30rpx;
+  background: ghostwhite;
+  display: flex;
+  align-items: center;
+  border-bottom: 3rpx solid gainsboro;
+}
+
+.list>view image {
+  width: 170rpx;
+  height: 230rpx;
+  margin-right: 30rpx;
+}
+
+.list>view>view {
+  flex: 1;
+  height: 130rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.list>view>view view:nth-child(1) {
+  width: 500rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 33rpx;
+}
+
+.list>view>view view:nth-child(2) {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 32rpx;
+}
+
+
+.list>view>view view>text {
+  color: red;
+}
+
+.list>view>view view>text text {
+  font-size: 40rpx;
+}
+
+.nav {
+  width: 100%;
+  height: 110rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  border-bottom: 1rpx solid ghostwhite;
+  font-size: 32rpx;
+  color: gray;
+}
+
+.nav view {
+  display: flex;
+  align-items: center;
+  font-size: 42rpx;
+  color: black;
+}
+
+.nav view icon {
+  margin: 0 10rpx;
+}
+
+.address1 {
+  width: 100%;
+  height: 110rpx;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid ghostwhite;
+  font-size: 32rpx;
+}
+
+.address1 image {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+}
+
+.address {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40rpx 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx solid ghostwhite;
+}
+
+.address>view {
+  flex: 1;
+  height: 110rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  font-size: 32rpx;
+}
+
+.address>view view:last-child {
+  width: 100%;
+  color: gray;
+}
+
+.address .van-icon {
+  font-size: 40rpx;
+  color: gray;
+}
+
+.input {
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1rpx solid ghostwhite;
+  display: flex;
+  font-size: 32rpx;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  margin-bottom: 130rpx;
+}
+
+.input input {
+  margin-left: 50rpx;
+  font-size: 32rpx;
+}
+
+.input ::-webkit-input-placeholder {
+  color: gray;
+  font-size: 32rpx;
+}
+
+.footer {
+  width: 100%;
+  height: 120rpx;
+  background: white;
+  box-sizing: border-box;
+  padding: 10rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 33rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 111;
+  border-top: 1rpx solid gainsboro;
+}
+
+.footer>view:first-child>text {
+  color: red;
+  font-size: 28rpx;
+}
+
+.footer>view:first-child>text text {
+  font-size: 40rpx;
+}
+
+.footer>view:last-child {
+  width: 300rpx;
+  height: 100%;
+  border-radius: 200rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: red;
+}

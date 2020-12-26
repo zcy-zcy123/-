@@ -1,0 +1,16 @@
+<!--pages/address-list/address-list.wxml-->
+<view class="container">
+  <view wx:for="{{list}}" wx:key='index' class="li">
+    <view>
+      <view>{{item.linkMan}} {{item.mobile}}</view>
+      <view>{{item.address}}</view>
+    </view>
+    <image src="/assets/images/common/del.png" bindtap="remove" data-id='{{item.id}}'></image>
+  </view>
+  <view class="footer" bindtap="add_address">
+    <view>
+      <van-icon name="plus" />
+    </view>
+    新增收货地址
+  </view>
+</view>

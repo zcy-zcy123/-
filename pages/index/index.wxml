@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<swiper indicator-dots='{{true}}'>
+  <swiper-item wx:for="{{banner}}" wx:key='index'>
+    <image src="{{item.picUrl}}"></image>
+    <van-button type="primary" size='small' wx:if="{{index==2}}" bind:click="add">进入店铺</van-button>
+  </swiper-item>
+</swiper>

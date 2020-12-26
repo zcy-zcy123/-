@@ -1,0 +1,91 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+  <scroll-view scroll-y lower-threshold="100" bindscrolltolower="scrollToLower" style="height: 100vh;">
+    <!-- 轮播 -->
+    <view class="swiper">
+      <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{1500}}" duration="{{500}}" circular="{{true}}">
+        <swiper-item wx:for="{{banner}}" wx:key='index'>
+          <image src="{{item.picUrl}}"></image>
+        </swiper-item>
+      </swiper>
+      <view>
+        <van-icon name="search" />
+        <input type="text" placeholder="请输入搜索关键词" placeholder-style='font-size:30rpx' bindtap="search" />
+      </view>
+    </view>
+    <!-- 消息 -->
+    <van-notice-bar color="#ee0a24" background="#fff" left-icon="volume-o" mode="link" wx:for="{{top}}" wx:key='index'
+      text="{{item.title}}" bindtap="news" data-id="{{item.id}}" />
+    <!-- 宫格 -->
+    <van-grid column-num="5" border="{{ false }}">
+      <van-grid-item icon="{{item.icon}}" text="{{item.name}}" wx:for="{{ nav }}" wx:key='index' data-id="{{item.id}}"
+        bindtap="classify" />
+    </van-grid>
+    <view class="tab">
+      <van-divider contentPosition="center">秒杀</van-divider>
+    </view>
+    <!-- 秒杀 -->
+    <view class="miao">
+      <view wx:for="{{miao}}" wx:key='index' bindtap="detail" data-id="{{item.id}}">
+        <image src="{{item.pic}}"></image>
+        <view>
+          <view>{{item.name}}</view>
+          <view>
+            <van-progress color="#ee0a24" percentage="100" />
+          </view>
+          <view>
+            <text>￥{{item.minPrice}}</text><text>￥{{item.originalPrice}}</text><text>已结束</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="tab">
+      <van-divider contentPosition="center">爆品推荐</van-divider>
+    </view>
+    <!-- 推荐 -->
+    <view class="tui">
+      <view wx:for="{{tui}}" wx:key='index' bindtap="detail" data-id="{{item.id}}">
+        <image src="{{item.pic}}"></image>
+        <view>{{item.name}}</view>
+        <view>￥{{item.minPrice}}</view>
+      </view>
+    </view>
+    <view class="tab">
+      <van-divider contentPosition="center">全民拼团</van-divider>
+    </view>
+    <!-- 拼团 -->
+    <view class="pin">
+      <view wx:for="{{pin}}" wx:key='index'>
+        <image src="{{item.pic}}"></image>
+        <view>
+          <view>{{item.name}}</view>
+          <view>
+            <view>
+              <view>{{item.characteristic}}</view>
+              <view>￥{{item.minPrice}}<text>￥{{item.originalPrice}}</text></view>
+            </view><text bindtap="detail" data-id="{{item.id}}">拼团</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="tab">
+      <van-divider contentPosition="center">商品列表</van-divider>
+    </view>
+    <!-- 列表 -->
+    <view class="shop">
+      <view wx:for="{{shop}}" wx:key='index' bindtap="detail" data-id="{{item.id}}">
+        <image src="{{item.pic}}"></image>
+        <view>{{item.name}}</view>
+        <view>￥{{item.minPrice}}<text>￥{{item.originalPrice}}</text></view>
+      </view>
+    </view>
+    <view style="text-align: center;margin: 10px;">
+      <view wx:if="{{loading}}">加载中...</view>
+      <view wx:if="{{noMore}}">没有更多了</view>
+    </view>
+  </scroll-view>
+  <!-- 优惠劵 -->
+  <view class="img" bindtap="you">
+    <image src="/assets/images/common/gift.png"></image>
+  </view>
+</view>

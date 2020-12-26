@@ -1,0 +1,31 @@
+<!--pages/classify/classify.wxml-->
+<view class="container">
+  <view>
+    <van-search value="{{ value }}" placeholder="请输入搜索关键词" bindtap="search"/>
+  </view>
+  <view>
+    <scroll-view scroll-y style="height: 90vh;width:25%">
+      <view class="nav">
+        <view wx:for="{{nav}}" wx:key='index' class="{{active==index?'cur':'curr'}}" bindtap="activeSelect"
+          data-index='{{index}}' data-id='{{item.id}}'>
+          {{item.name}}</view>
+      </view>
+    </scroll-view>
+    <scroll-view scroll-y style="height: 90vh;width:75%">
+      <view class="list">
+        <van-empty description="暂无商品" wx:if="{{show}}" />
+        <view wx:for="{{list}}" wx:key='index' wx:if="{{!show}}">
+          <image src="{{item.pic}}" bindtap="detail" data-id="{{item.id}}"></image>
+          <view>
+            <view>
+              <view>{{item.name}}</view><text>{{item.minScore==0?'':'已售'+item.minScore}}</text>
+            </view>
+            <view><text>￥{{item.originalPrice}}</text>
+              <van-icon name="cart-circle-o" bindtap="addCar" data-id='{{item.id}}' />
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

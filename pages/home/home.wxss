@@ -1,0 +1,264 @@
+/* pages/home/home.wxss */
+.swiper {
+  width: 100%;
+  height: 400rpx;
+  position: relative;
+}
+
+swiper {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-item {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-item image {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper>view {
+  position: absolute;
+  top: 20rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 70rpx;
+  border-radius: 70rpx;
+  display: flex;
+  align-items: center;
+  background: white;
+}
+
+.swiper>view .van-icon {
+  margin: 0 30rpx;
+  font-size: 40rpx;
+  color: gray;
+}
+
+.swiper>view input {
+  flex: 1;
+  font-size: 30rpx;
+}
+
+.tab {
+  box-sizing: border-box;
+  padding: 0 110rpx;
+}
+
+.miao {
+  width: 90%;
+  margin: 0 auto;
+  background: ghostwhite;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.miao>view {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.miao>view image {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.miao>view>view {
+  flex: 1;
+  font-size: 28rpx;
+  box-sizing: border-box;
+  padding: 0 15rpx;
+  height: 200rpx;
+  flex-wrap: wrap;
+  display: flex;
+  align-content: space-between;
+}
+
+.miao>view>view>view {
+  width: 100%;
+}
+
+.miao>view>view>view:last-child {
+  font-size: 35rpx;
+  color: red;
+}
+
+.miao>view>view>view:last-child>text:nth-child(2) {
+  color: black;
+  text-decoration: line-through;
+  font-size: 28rpx;
+  margin-left: 10rpx;
+}
+
+.miao>view>view>view:last-child>text:nth-child(3) {
+  float: right;
+  padding: 10rpx;
+  border-radius: 100rpx;
+  background: red;
+  color: white;
+  font-size: 30rpx;
+}
+
+.tui {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20rpx;
+  padding-right: 30rpx;
+  background: ghostwhite;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tui>view {
+  width: 48%;
+  background: white;
+  border-radius: 10rpx;
+}
+
+.tui>view image {
+  width: 100%;
+  height: 250rpx;
+  border-radius: 10rpx;
+}
+
+.tui>view view {
+  margin: 10rpx 0;
+  box-sizing: border-box;
+  padding: 0 10rpx;
+  font-size: 30rpx;
+}
+
+.tui>view>view:last-child {
+  color: red;
+  font-size: 32rpx;
+}
+
+.pin {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30rpx 20rpx;
+  background: ghostwhite;
+}
+
+.pin>view {
+  width: 100%;
+  position: relative;
+}
+
+.pin>view image {
+  width: 100%;
+}
+
+.pin>view>view {
+  width: 100%;
+  height: 250rpx;
+  box-sizing: border-box;
+  padding: 20rpx 15rpx;
+  background: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.pin>view>view>view:first-child {
+  font-size: 35rpx;
+  margin-bottom: 10rpx;
+}
+
+.pin>view>view>view:last-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pin>view>view>view:last-child>view:first-child {
+  font-size: 32rpx;
+  color: gray;
+}
+
+.pin>view>view>view:last-child>view:first-child>view:last-child {
+  font-size: 35rpx;
+  color: red;
+  margin-top: 10rpx;
+}
+
+.pin>view>view>view:last-child>view:first-child>view:last-child text {
+  margin-left: 15rpx;
+  color: gray;
+  text-decoration: line-through;
+  font-size: 32rpx;
+}
+
+.pin>view>view>view:last-child>text {
+  padding: 10rpx 30rpx;
+  background: firebrick;
+  color: white;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  height: 50rpx;
+}
+
+.shop {
+  width: 100%;
+  background: ghostwhite;
+  box-sizing: border-box;
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.shop>view {
+  width: 48%;
+  background: white;
+  border-radius: 10rpx;
+  margin: 20rpx 0;
+}
+
+.shop>view image {
+  width: 100%;
+  height: 300rpx;
+  border-radius: 10rpx;
+}
+
+.shop>view view {
+  box-sizing: border-box;
+  padding: 0 10rpx;
+  margin-bottom: 10rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.shop>view view:last-child {
+  color: red;
+}
+
+.shop>view view text:last-child {
+  color: gray;
+  text-decoration: line-through;
+  font-size: 30rpx;
+  margin: 0 20rpx;
+}
+
+.img {
+  width: 60rpx;
+  height: 60rpx;
+  position: fixed;
+  bottom: 30rpx;
+  right: 20rpx;
+  border-radius: 50%;
+  background: white;
+  border: 1rpx solid gainsboro;
+  padding: 10rpx;
+}
+
+.img image {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,114 @@
+/* pages/shopCar/shopCar.wxss */
+.container {
+  width: 100%;
+  background: ghostwhite;
+}
+
+.null {
+  width: 100%;
+  text-align: center;
+  padding: 200rpx 0;
+}
+
+.null .van-icon {
+  font-size: 250rpx;
+  color: gray;
+}
+
+.null .name {
+  font-size: 30rpx;
+  color: gray;
+}
+
+.null .go {
+  width: 300rpx;
+  height: 80rpx;
+  background: firebrick;
+  border-radius: 10rpx;
+  color: white;
+  margin: 20rpx auto;
+  font-size: 35rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  width: 100%;
+  height: 90vh;
+  background: white;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+
+.item>view {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid gainsboro;
+  display: flex;
+}
+
+.item>view>image {
+  width: 180rpx;
+  height: 200rpx;
+  margin-right: 30rpx;
+}
+
+.item>view>view {
+  flex: 1;
+  height: 200rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.item>view>view view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.item>view>view view:nth-child(1) text{
+  width: 400rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.item>view>view view:nth-child(1) image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.item>view>view view:nth-child(2) {
+  color: red;
+}
+
+.footer {
+  width: 100%;
+  height: 100rpx;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.footer>view:nth-child(1) {
+  color: red;
+  font-size: 30rpx;
+  padding-left: 30rpx;
+}
+
+.footer>view:nth-child(2) {
+  width: 250rpx;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: red;
+  font-size: 32rpx;
+}

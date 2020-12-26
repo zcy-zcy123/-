@@ -1,0 +1,51 @@
+<!--pages/order/order.wxml-->
+<view class="container">
+  <view class="list" wx:if="{{show}}">
+    <view>
+      <image src="{{shopList.pic}}"></image>
+      <view>
+        <view>{{shopList.name}}</view>
+        <view><text>￥<text>{{shopList.minPrice}}</text></text>x1</view>
+      </view>
+    </view>
+  </view>
+  <view class="list" wx:else>
+    <view wx:for="{{shopList.items}}" wx:key='index'>
+      <image src="{{item.pic}}"></image>
+      <view>
+        <view>{{item.name}}</view>
+        <view><text>￥<text>{{item.price}}</text></text>x{{item.number}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="nav">
+    <text>配送方式</text>
+    <view>
+      <icon class="icon-small" type="success" size="23"></icon>快递
+      <icon class="icon-small" type="circle" size="23"></icon>到店自取
+    </view>
+  </view>
+  <view class="address1" wx:if="{{flag}}" bindtap="add_address">
+    <image src="/assets/images/common/add-addr.png"></image>
+    新增收货地址
+  </view>
+  <view class="address" wx:else bindtap="address_list">
+    <view>
+      <view>{{address.linkMan}} {{address.mobile}}</view>
+      <view>{{address.address}}</view>
+    </view>
+    <van-icon name="arrow" />
+  </view>
+  <view class="input">
+    备注
+    <input type="text" placeholder="如需备注请输入" />
+  </view>
+  <view class="footer" wx:if="{{show}}">
+    <view>合计：<text>￥<text>{{shopList.minPrice}}</text>.00</text>+{{shopList.minScore}}积分</view>
+    <view bindtap="goMoney">提交订单</view>
+  </view>
+  <view class="footer" wx:else>
+    <view>合计：<text>￥<text>{{shopList.price}}</text>.00</text>+{{shopList.number}}积分</view>
+    <view bindtap="goMoney">提交订单</view>
+  </view>
+</view>

@@ -1,0 +1,62 @@
+/* pages/address-list/address-list.wxss */
+.container {
+  width: 100%;
+}
+
+.li {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30rpx;
+  border-bottom: 1rpx solid gainsboro;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.li>view {
+  width: 80%;
+  height: 100rpx;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 32rpx;
+  align-content: space-between;
+}
+
+.li image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.li>view view:last-child {
+  color: gray;
+  width: 100%;
+}
+
+.footer {
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35rpx;
+  background: #07C160;
+}
+
+.footer view {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  border: 3rpx solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10rpx;
+}
+
+.footer view .van-icon {
+  font-size: 30rpx;
+}

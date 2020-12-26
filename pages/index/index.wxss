@@ -1,0 +1,23 @@
+/**index.wxss**/
+
+swiper {
+  width: 100%;
+  height: 100vh;
+}
+
+.swiper-item {
+  width: 100%;
+  height: 100%;
+}
+
+image {
+  width: 100%;
+  height: 100%;
+}
+
+.van-button {
+  position: fixed;
+  bottom: 200rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}

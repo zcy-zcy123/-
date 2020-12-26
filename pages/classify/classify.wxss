@@ -1,0 +1,97 @@
+/* pages/classify/classify.wxss */
+.container {
+  width: 100%;
+}
+
+.container>view:first-child {
+  height: 12vh;
+}
+
+.container>view:last-child {
+  height: 88vh;
+  display: flex;
+}
+
+.nav {
+  width: 100%;
+}
+
+.nav view {
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  box-sizing: border-box;
+}
+
+.nav view.cur {
+  color: black;
+  background: white;
+  border-left: 5rpx solid red;
+}
+
+.nav view.curr {
+  color: black;
+  background: ghostwhite;
+  border-left: 5rpx solid ghostwhite;
+}
+
+.list {
+  width: 100%;
+  background: ghostwhite;
+  box-sizing: border-box;
+  padding: 0 10rpx;
+}
+
+.list>view {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20rpx;
+  display: flex;
+}
+
+.list>view image {
+  width: 30%;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+
+.list>view>view {
+  flex: 1;
+  height: 200rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+
+.list>view>view>view:first-child {
+  width: 100%;
+}
+
+.list>view>view>view:first-child view {
+  width: 300rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.list>view>view>view:first-child text {
+  font-size: 28rpx;
+  color: gray;
+}
+
+.list>view>view>view:last-child {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: red;
+}
+
+.list>view>view>view:last-child .van-icon {
+  font-size: 50rpx;
+}
